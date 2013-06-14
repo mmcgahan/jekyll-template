@@ -1,0 +1,385 @@
+// _typography.scss
+// -------------------------------------------------------------
+
+$base_line_height:              28; //px
+$line_height_standard:          1.5;
+$line_height_heading:           1;
+$line_height_lists:             1.2;
+
+
+// Default typographic scales......
+// zero-based when calling type-scale
+//             0  1  2  3  4  5  6  7  8
+$type-scales: 13 15 16 18 20 25 32 40 48;
+// base             16
+
+%scale-0 {
+    font-size: px-to-em(nth($type-scales, 1));
+}
+
+%scale-1 {
+    font-size: px-to-em(nth($type-scales, 2));
+}
+
+%scale-2 {
+    font-size: px-to-em(nth($type-scales, 3));
+}
+
+%scale-3 {
+    font-size: px-to-em(nth($type-scales, 4));
+}
+
+%scale-4 {
+    font-size: px-to-em(nth($type-scales, 5));
+}
+
+%scale-5 {
+    font-size: px-to-em(nth($type-scales, 6));
+}
+
+%scale-6 {
+    font-size: px-to-em(nth($type-scales, 7));
+}
+
+%scale-7 {
+    font-size: px-to-em(nth($type-scales, 8));
+}
+
+%scale-serif-0 {
+    font-size: px-to-em(16);
+}
+
+%scale-secondary-0 {
+    font-size: px-to-em(13);
+}
+
+%scale-primary-detail {
+    font-size: px-to-em(16);
+}
+
+
+@mixin type-scale($num: 1, $in-query: false) {
+    @if $in-query == true {
+        font-size: px-to-em(nth($type-scales, $num+1));
+    } @else {
+        @extend %scale-#{$num};
+    }
+}
+
+%type-primary {
+    @extend %type-light;
+}
+
+%type-sans {
+    font-family: $base-font-sans-stack;
+    word-spacing: 0;
+}
+%type-small-sans {
+    @include type-scale(0);
+    font-family: $base-font-sans-stack;
+    word-spacing: 0;
+}
+
+%type-secondary {
+    font-family: $secondary-font-serif-stack;
+    word-spacing: 0;
+}
+
+%type-thin {
+    @include font($font-weight: 200);
+}
+%type-light {
+    @include font($font-weight: 300);
+    -webkit-font-smoothing: antialiased;
+}
+%type-regular {
+    @include font($font-weight: 400);
+}
+%type-medium {
+    @include font($font-weight: 500);
+}
+%type-bold {
+    @include font($font-weight: 700);
+}
+%type-black {
+    @include font($font-weight: 900);
+}
+%type-italic {
+    font-style: italic;
+}
+%type-antialiased {
+    -webkit-font-smoothing: antialiased;
+}
+
+%text-teal {
+    color: $teal;
+}
+
+%text-color-base {
+    color: $color-text;
+}
+
+%small-caps {
+    @include font($font-family: TisaPro-SC, $font-weight: 400);
+    @include type-scale(1);
+}
+
+.small-caps {
+    @extend %small-caps;
+}
+%type-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.uppercase {
+    @extend %type-uppercase;
+}
+
+
+// -------------------------------------------------------------
+
+body {
+    @include type-scale(2);
+    line-height: $line_height_standard;
+}
+
+h2, h4, h6,
+.h2, .h4, .h6 {
+    @extend %type-bold;
+}
+h1, .h1 {
+    @extend %type-light;
+    @include type-scale(7);
+    line-height: 1.25;
+    margin-bottom: .4em;
+
+    @include media(mobile-only) {
+        //font-size: px-to-em(nth($type-scales, 4));
+    }
+}
+
+h2, .h2 {
+    @include type-scale(5);
+    @include media(mobile-only) {
+        //font-size: px-to-em(nth($type-scales, 3));
+    }
+}
+
+h3, .h3 {
+    @include type-scale(4);
+    margin-bottom: .6em;
+    p + & {
+        margin-top: 2em;
+    }
+
+    @include media(mobile-only) {
+      //  font-size: px-to-em(nth($type-scales, 2));
+    }
+}
+
+h4, .h4 {
+    @include type-scale(3);
+    margin-bottom: .3em;
+}
+
+h5, .h5 {
+    @extend %type-medium;
+    @include type-scale(3);
+    margin-bottom: 0.5em;
+}
+
+h6, .h6 {
+    @include type-scale(0);
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+}
+
+
+
+
+strong {
+    @extend %type-bold;
+}
+
+.subheading {
+    @include type-scale(3);
+}
+
+.intro {
+    @include type-scale(4);
+    margin-top: .5em;
+
+    @include media('mobile-only') {
+        margin-top: .5em !important;
+        @include type-scale(2, true);
+    }
+}
+
+
+// -------------------------------------------------------------
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+p, ul, ol {
+    margin: 0 0 .6em;
+}
+
+.standard_list {
+    padding-left: 2em;
+    li {
+        vertical-align: middle;
+        padding: .2em .5em;
+    }
+}
+
+ul.standard_list {
+    list-style-type: disc;
+}
+
+ol.standard_list {
+    list-style-type: decimal;
+}
+
+
+
+
+
+// Links.
+// ---------
+
+a {
+    @include transition(color $link_transition_timing);
+    text-decoration: none;
+    color: $color-links;
+
+    &:hover,
+    a:active,
+    &:focus {
+        color: $color-links_hover;
+        outline: 0;
+        @include transition(color 0s); // having transition only on hover prevents sluggish fade-in, but maintains restful fade-out
+    }
+}
+
+.link_read_more {
+    display: block;
+}
+
+.huge_link {
+    @extend %type-light;
+    @include type-scale(7);
+    position: relative;
+    color: $another-blue;
+    background: $very-pale-blue;
+    display: inline-block;
+    padding: 0.3em 1.5em 0.15em 0.5em;
+    margin: 1em 0 1em -0.5em; // so text is aligned, not the background
+
+    &:hover {
+        cursor: pointer;
+        background: darken($very-pale-blue, 8%);
+    }
+
+    .icon {
+        @include background-sprite('base', 'arrow-large-blue', $print-dimensions: true);
+        position: absolute;
+        display: block;
+        right: 0.5em;
+        top: 0.75em;
+    }
+
+    @include media('mobile-only') {
+        @include type-scale(6, true);
+        margin-left: 0;
+        padding-right: 1.75em;
+
+        .icon { top: 0.6em; }
+    }
+}
+
+
+// Other elements
+// --------------
+
+cite {
+    color: $grey;
+    font-style: italic;
+    display: block;  // necessary for line height adj.
+    line-height: 1.285;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+blockquote {
+    position: relative;
+    padding: 1.2em 1.7em 1.3em;
+    margin: 0;
+
+    &:before, &:after {
+        @extend %type-secondary;
+        position: absolute;
+        color: $grey-light;
+        font-style: normal;
+        font-size: px-to-em(100);
+        font-weight: bold;
+        line-height: 1px; // to prevent it from creating gaps in <p>
+    }
+
+    &:before {
+        content: "\201C";
+        top: 0.6em;
+        left: -0.45em;
+    }
+
+    p {
+        @include type-scale(primary-detail);
+        font-style: italic;
+        margin: 0 0 0.75em;
+        word-spacing: 0;
+        line-height: 1.4;
+
+        .home & {
+            @include type-scale(1);
+        }
+
+    }
+}
+
+.col_quote {  // usually a blockquote element
+    @extend %text-color-base;
+    padding: 0;
+    margin: .5em 0;
+    &:after, &:before {
+        content: '';
+    }
+
+    p, cite {
+        @include type-scale(2);
+        @include font($font-family: $base-font-family,  $font-style: italic);
+        //margin-bottom: 0;
+    }
+}
+
+.figcaption {
+    @include type-scale(0);
+    @extend %type-sans;
+    margin-top: 1em;
+    color: $grey;
+}
+
+@include media('mobile-only') {
+    h1 {
+        @include type-scale(6, $in-query: true);
+        line-height: 1.2;
+    }
+    h2 {
+        @include type-scale(4, $in-query: true)
+    }
+}

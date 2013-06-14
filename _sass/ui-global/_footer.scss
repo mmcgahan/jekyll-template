@@ -1,0 +1,72 @@
+/*****************************************
+    footer
+*****************************************/
+.site_footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+    background: $grey-lightest;
+    border-top: 1px solid $grey-light;
+
+    @include media('desktop-up') {
+        text-align: center;
+
+        .contact_option {
+            padding-left: 2em;
+
+            &:first-child { padding-left: 0; }
+        }
+    }
+
+    .contact_options {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .contact_option {
+        position: relative;
+        font-style: normal;
+        list-style: none;
+        display: inline;
+        line-height: 2em;
+        color: $grey-dark;
+
+        a {
+            color: $grey-dark;
+            position: relative;
+            padding-left: 24px;
+
+
+            .icon {
+                position: absolute;
+                top: -0.25em;
+                left: 0;
+            }
+        }
+
+        @include media('skinny-down') {
+            display: block;
+
+            a {
+                display: block;
+                line-height: 1.5;
+                margin-bottom: 0.3em;
+            }
+        }
+    }
+
+    .contact_email .icon {
+        @include background-sprite('base', 'envelope', $print-dimensions: true);
+    }
+    .contact_address .icon {
+        @include background-sprite('base', 'map-marker', $print-dimensions: true);
+    }
+    .contact_twitter .icon {
+        padding-left: 21px;
+        @include background-sprite('base', 'twitter', $print-dimensions: true);
+    }
+    .contact_phone .icon {
+        @include background-sprite('base', 'phone', $print-dimensions: true);
+    }
+}
+

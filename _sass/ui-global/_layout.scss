@@ -1,0 +1,162 @@
+// _layout.scss
+// ------------
+
+// Vertical rhythm
+$hero-vertical-space:               2.8em;
+$hero-vertical-space-mobile:        1.8em;
+
+$section-vertical-space:            4em;
+$section-vertical-space-mobile:     3em;
+
+
+// Layout
+$header-height:                     60px;
+$grid-full-width-max-width:         1296px;
+
+$nav-height-skinny:                 55px;
+$nav-height-mobile:                 445px;
+$header-feature-height:             458px;
+$header-feature-skinny:             $header-feature-height - $nav-height-skinny;
+$header-feature-mobile:             $header-feature-height - $nav-height-mobile;
+
+
+
+.site_nav {
+    z-index: 1; // to keep the links clickable;
+    @include transition(transform 0.3s ease-in-out);
+
+    @include media('desktop-up') {
+        .header_feature_active & {
+            @include transform(translate3d(0, #{$header-feature-height}, 0)); // height of nav
+        }
+    }
+
+    @include media('skinny-only') {
+        @include transform(translate3d(0, -#{$nav-height-skinny}, 0)); // height of nav
+    }
+
+
+    @include media ('skinny-down') {
+        .nav_active & {
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+
+
+    @include media('mobile-only') {
+        @include transform(translate3d(0, -#{$nav-height-mobile}, 0)); // height of nav
+    }
+
+    .no-js & {
+        position: static;
+        display: table-footer-group;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+
+
+
+.page_wrapper {
+    position: relative;
+    top: -$header-feature-height;
+
+    @include transition(transform 0.3s ease-in-out);
+
+    @include media('skinny-up') {
+        @include transform(translate3d(0, 0, 0)); // hide the bio
+        .header_feature_active & {
+            @include transform(translate3d(0, #{$header-feature-height}, 0));
+        }
+    }
+
+    @include media ('skinny-only') {
+        .nav_active & {
+            @include transform(translate3d(0, -#{$header-feature-skinny}, 0)); // negative height of bio minus height of nav
+        }
+    }
+
+
+    @include media ('mobile-only') {
+        top: 0;
+        .nav_active & {
+            @include transform(translate3d(0, #{$nav-height-mobile}, 0)); // height of nav
+        }
+    }
+
+    .no-js & {
+        display: table-header-group;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+
+
+#header_feature {
+    @include media('skinny-up') {
+        .no-js & { margin-top: -#{$header-feature-height}; }
+    }
+
+    @include media('mobile-only') {
+        .no-js & { margin-top: -#{$header-feature-mobile}; }
+    }
+}
+
+
+
+
+
+
+// Spacing
+%add-top-spacing {
+    padding-top: $section-vertical-space;
+    @include media('mobile-only') {
+        padding-top: $section-vertical-space-mobile;
+    }
+    // padding-top: 3em;
+
+    // @include media('mobile-only') {
+    //     padding-top: 1.5em;
+    // }
+}
+
+%add-bottom-spacing {
+    padding-bottom: $section-vertical-space;
+    @include media('mobile-only') {
+        padding-bottom: $section-vertical-space-mobile;
+    }
+
+    // padding-bottom: 3em;
+
+    // @include media('mobile-only') {
+    //     padding-bottom: 1.5em;
+    // }
+}
+
+
+
+.primary_content {
+    @extend %add-bottom-spacing
+}
+
+.section {
+    @extend %add-top-spacing;
+}
+
+%centered_horiz_list {
+    text-align: center;
+}
+%centered_horiz_list_item {
+    display: inline-block;
+}
+%centered {
+    text-align: center;
+}
+
+
+
+%hide-mobile {
+    @include media('mobile-only') {
+        display: none;
+    }
+}
+
+

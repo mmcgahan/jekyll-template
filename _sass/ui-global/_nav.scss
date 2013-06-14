@@ -1,0 +1,208 @@
+// _nav.scss
+// ---------
+
+
+.site_nav {
+    //z-index: 1;
+
+    .site_nav_links {
+        display: inline-block;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+
+        &.touch_only {
+            padding: 0.45em 0.5em 1em; // this increases the row height to match other rows
+        }
+
+        .springload {
+            .text { @include hide-text; }
+            .icon {
+                @include background-sprite($folder-name: 'base', $image-name: 'mini-springload-icon', $print-dimensions: true);
+                display: inline-block;
+                position: relative;
+                top: 0.3em;
+            }
+        }
+
+        .touch_nav_close {
+            .text { @include hide-text; }
+            .icon {
+                @include background-sprite($folder-name: 'base', $image-name: 'close-small-white', $print-dimensions: true);
+                display: inline-block;
+                position: absolute;
+                top: 0.55em;
+                right: 0.2em;
+            }
+        }
+    }
+
+    .site_nav_link {
+        @extend %small-caps;
+        position: relative;
+        color: $black;
+        display: block;
+        padding: 1em 0 2em;
+        margin: 0 1em;
+        border-top: 5px solid transparent;
+
+        &.current {
+            color: $color-links;
+            border-color: tint($color-links, 70%);
+        }
+
+        .icon {
+            @include background-sprite($folder-name: 'base', $image-name: 'arrow-thin-white', $print-dimensions: true);
+            position: absolute;
+            top: 0.75em;
+            right: 0.7em;
+            display: inline-block;
+        }
+    }
+
+
+    @include media('desktop-up') {
+        height: 0;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+
+        li {
+            &.touch_only { display: none; }
+        }
+
+        .site_nav_link {
+            .icon { display: none; }
+        }
+    }
+
+    @include media('skinny-down') {
+        position: absolute;
+        width: 100%;
+
+        background: $charcoal;
+        color: $white;
+        text-align: left;
+        height: auto;
+
+        li {
+            margin: 0 1em;
+        }
+
+        .site_nav_link {
+            @include type-scale(3, true);
+            -webkit-font-smoothing: antialiased;
+            color: $white;
+            padding: 0.5em 0.5em 0.6em;
+            margin: 0;
+
+            &.current {
+                border-color: transparent;
+            }
+        }
+
+        .touch_nav_close { right: 0; }
+        .desktop_only { display: none; }
+    }
+
+
+    @include media('skinny-only') {
+        .touch_nav_close {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 0;
+            margin-top: 0.75em;
+            margin-right: 1.5em;
+
+            .icon {
+                top: -1.1em;
+                right: 1.75em;
+            }
+        }
+
+        .site_nav_link {
+            .icon { display: none; }
+        }
+    }
+
+
+    @include media('mobile-only') {
+        .site_nav_links {
+            display: block;
+            text-align: left;
+        }
+
+        li {
+            border-bottom: 1px solid $charcoal-highlight;
+            display: block;
+
+            &.touch_only {
+
+                .springload,
+                .touch_nav_close {
+                    display: inline-block;
+                    width: 45%;
+                }
+
+                .touch_nav_close {
+                    position: relative;
+                    float: right;
+                }
+
+            }
+        }
+    }
+}
+
+
+.mobile_contact_details {
+    @include media('skinny-up') {
+        display: none;
+    }
+
+    margin: 1.5em 0 2.5em;
+
+    li {
+        @extend %type-italic;
+        list-style: none;
+        border: none;
+    }
+
+    a {
+        position: relative;
+        color: $grey-medium;
+        display: block;
+        padding: 0.2em 0 0.2em 1.8em;
+
+        .icon {
+            position: absolute;
+            left: 0;
+            top: 0.3em;
+        }
+    }
+
+
+    .address .icon {
+        @include background-sprite('base', 'map-marker', $print-dimensions: true);
+    }
+
+    .email .icon {
+        @include background-sprite('base', 'envelope', $print-dimensions: true);
+    }
+
+    .phone .icon {
+        @include background-sprite('base', 'phone', $print-dimensions: true);
+    }
+
+    .twitter .icon {
+        @include background-sprite('base', 'twitter', $print-dimensions: true);
+    }
+}
+
+
+
+
+
