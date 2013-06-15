@@ -85,12 +85,15 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
     word-spacing: 0;
 }
 
+%type-antialiased {
+    -webkit-font-smoothing: antialiased;
+}
 %type-thin {
     @include font($font-weight: 200);
 }
 %type-light {
     @include font($font-weight: 300);
-    -webkit-font-smoothing: antialiased;
+    @extend %type-antialiased;
 }
 %type-regular {
     @include font($font-weight: 400);
@@ -104,34 +107,10 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
 %type-black {
     @include font($font-weight: 900);
 }
-%type-italic {
-    font-style: italic;
-}
-%type-antialiased {
-    -webkit-font-smoothing: antialiased;
-}
-
-%text-teal {
-    color: $teal;
-}
-
-%text-color-base {
-    color: $color-text;
-}
-
-%small-caps {
-    @include font($font-family: TisaPro-SC, $font-weight: 400);
-    @include type-scale(1);
-}
-
-.small-caps {
-    @extend %small-caps;
-}
 %type-uppercase {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .uppercase {
     @extend %type-uppercase;
 }
@@ -144,60 +123,37 @@ body {
     line-height: $line_height_standard;
 }
 
-h2, h4, h6,
-.h2, .h4, .h6 {
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+h2, h4, h6 {
     @extend %type-bold;
 }
-h1, .h1 {
-    @extend %type-light;
+h1 {
     @include type-scale(7);
     line-height: 1.25;
-    margin-bottom: .4em;
-
-    @include media(mobile-only) {
-        //font-size: px-to-em(nth($type-scales, 4));
-    }
 }
-
-h2, .h2 {
+h2 {
     @include type-scale(5);
-    @include media(mobile-only) {
-        //font-size: px-to-em(nth($type-scales, 3));
-    }
 }
-
-h3, .h3 {
+h3 {
     @include type-scale(4);
-    margin-bottom: .6em;
     p + & {
         margin-top: 2em;
     }
-
-    @include media(mobile-only) {
-      //  font-size: px-to-em(nth($type-scales, 2));
-    }
 }
-
-h4, .h4 {
+h4 {
     @include type-scale(3);
-    margin-bottom: .3em;
 }
-
-h5, .h5 {
-    @extend %type-medium;
+h5, h6 {
     @include type-scale(3);
-    margin-bottom: 0.5em;
+    text-transform: uppercase;
 }
-
-h6, .h6 {
+h6 {
     @include type-scale(0);
     text-transform: uppercase;
-    margin-bottom: 0.5em;
 }
-
-
-
-
 strong {
     @extend %type-bold;
 }
@@ -206,55 +162,27 @@ strong {
     @include type-scale(3);
 }
 
-.intro {
-    @include type-scale(4);
-    margin-top: .5em;
-
-    @include media('mobile-only') {
-        margin-top: .5em !important;
-        @include type-scale(2, true);
-    }
-}
-
-
 // -------------------------------------------------------------
 
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-    margin-top: 0;
-}
-
 p, ul, ol {
-    margin: 0 0 .6em;
+    margin: 0 0 0.5em;
 }
 
-.standard_list {
+.standard-list {
     padding-left: 2em;
     li {
-        vertical-align: middle;
-        padding: .2em .5em;
+        padding: 0.2em 0.5em;
     }
 }
-
-ul.standard_list {
+ul.standard-list {
     list-style-type: disc;
 }
-
-ol.standard_list {
+ol.standard-list {
     list-style-type: decimal;
 }
 
-
-
-
-
 // Links.
 // ---------
-
 a {
     @include transition(color $link_transition_timing);
     text-decoration: none;
@@ -269,43 +197,6 @@ a {
     }
 }
 
-.link_read_more {
-    display: block;
-}
-
-.huge_link {
-    @extend %type-light;
-    @include type-scale(7);
-    position: relative;
-    color: $another-blue;
-    background: $very-pale-blue;
-    display: inline-block;
-    padding: 0.3em 1.5em 0.15em 0.5em;
-    margin: 1em 0 1em -0.5em; // so text is aligned, not the background
-
-    &:hover {
-        cursor: pointer;
-        background: darken($very-pale-blue, 8%);
-    }
-
-    .icon {
-        @include background-sprite('base', 'arrow-large-blue', $print-dimensions: true);
-        position: absolute;
-        display: block;
-        right: 0.5em;
-        top: 0.75em;
-    }
-
-    @include media('mobile-only') {
-        @include type-scale(6, true);
-        margin-left: 0;
-        padding-right: 1.75em;
-
-        .icon { top: 0.6em; }
-    }
-}
-
-
 // Other elements
 // --------------
 
@@ -314,7 +205,6 @@ cite {
     font-style: italic;
     display: block;  // necessary for line height adj.
     line-height: 1.285;
-    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 blockquote {
@@ -344,34 +234,7 @@ blockquote {
         margin: 0 0 0.75em;
         word-spacing: 0;
         line-height: 1.4;
-
-        .home & {
-            @include type-scale(1);
-        }
-
     }
-}
-
-.col_quote {  // usually a blockquote element
-    @extend %text-color-base;
-    padding: 0;
-    margin: .5em 0;
-    &:after, &:before {
-        content: '';
-    }
-
-    p, cite {
-        @include type-scale(2);
-        @include font($font-family: $base-font-family,  $font-style: italic);
-        //margin-bottom: 0;
-    }
-}
-
-.figcaption {
-    @include type-scale(0);
-    @extend %type-sans;
-    margin-top: 1em;
-    color: $grey;
 }
 
 @include media('mobile-only') {

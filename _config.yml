@@ -1,2 +1,3 @@
 name: Test Jekyll site
-exclude: [config.rb, _sass]
+permalink: none
+exclude: [config.rb, _sass, Procfile]
