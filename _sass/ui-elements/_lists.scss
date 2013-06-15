@@ -1,0 +1,14 @@
+%list-bare {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0
+    }
+}
+%list-horiz-block {
+    @extend %list-bare;
+    li {
+        display: inline-block;
+    }
+}

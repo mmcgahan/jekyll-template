@@ -29,6 +29,10 @@
 // Include UI library
 // ==================================
 @import 'ui-library/mixin-indicator';
+// Include UI elements
+// ==================================
+@import 'ui-elements/tabs';
+@import 'ui-elements/lists';
 
 // Include base styles
 // ==================================
@@ -38,16 +42,14 @@
 @import 'core/utilities';
 @import 'core/base';
 
+
 // Include UI Global
 // ==================================
 @import 'ui-global/layout';
 @import 'ui-global/content';
-@import 'ui-global/nav';
+@import 'ui-global/header';
 @import 'ui-global/footer';
 
-// Include UI elements
-// ==================================
-@import 'ui-elements/tabs';
 
 // Include structure
 // ==================================

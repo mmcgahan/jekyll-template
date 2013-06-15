@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    @include font($font-family: $base-font-family, $font-weight: $base-font-weight, $font-style: normal);
+    @extend %type-primary;
     @extend %background-noise;
     color: $color-text;
     background-color: $color-body;
@@ -58,4 +58,9 @@ img {
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
     filter: 0;
+}
+hr {
+    border: solid $grey-light;
+    border-width: 1px 0 0;
+    margin: 1.5em 0 2.5em;
 }

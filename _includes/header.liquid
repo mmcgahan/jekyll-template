@@ -1,0 +1,16 @@
+<div id="header">
+    <div class="grid-container">
+        <div class="grid-row">
+            <div class="header-logo grid-col-3">
+                <h1 class="header-logo-title"><a href="{{ site.root }}">{{ site.name }}</a></h1>
+            </div>
+            <div class="header-nav grid-col-9">
+                <ul class="header-navlist">
+                    {% for post in site.tags.nav %}
+                    <li class="header-navitem"><a href="{{ site.root }}{{ post.url }}" class="header-navlink">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

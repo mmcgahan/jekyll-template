@@ -1,3 +1,4 @@
-name: Test Jekyll site
+name: Starting point
 permalink: none
 exclude: [config.rb, _sass, Procfile]
+root: "/"
