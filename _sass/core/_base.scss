@@ -8,7 +8,9 @@
 
 // Default base classes to extend
 
-
+%background-noise {
+    background-image: image-url('texture/noise-96-subtle.png');
+}
 html {
     font-family: 'mobile'; // for js media queries
     font-size: 100%;
@@ -19,9 +21,9 @@ html {
 
 body {
     @include font($font-family: $base-font-family, $font-weight: $base-font-weight, $font-style: normal);
+    @extend %background-noise;
     color: $color-text;
-
-    background-color: $color-bg;
+    background-color: $color-body;
     padding: 0;
     margin: 0;
     word-spacing: $word-spacing;
@@ -56,14 +58,4 @@ img {
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
     filter: 0;
-}
-
-// /* Lists
-//  * ========================================================================== */
-ul, li {
-    margin: 0;
-    padding: 0;
-}
-ol {
-    padding-left: 0;
 }

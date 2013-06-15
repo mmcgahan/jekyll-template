@@ -79,12 +79,6 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
     font-family: $base-font-sans-stack;
     word-spacing: 0;
 }
-
-%type-secondary {
-    font-family: $secondary-font-serif-stack;
-    word-spacing: 0;
-}
-
 %type-antialiased {
     -webkit-font-smoothing: antialiased;
 }
@@ -127,6 +121,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5em;
 }
+h1, h3, h5 {
+    @extend %type-light;
+}
 h2, h4, h6 {
     @extend %type-bold;
 }
@@ -164,20 +161,17 @@ strong {
 
 // -------------------------------------------------------------
 
-p, ul, ol {
+p {
     margin: 0 0 0.5em;
 }
 
-.standard-list {
+ul, ol {
     padding-left: 2em;
-    li {
-        padding: 0.2em 0.5em;
-    }
 }
-ul.standard-list {
+ul {
     list-style-type: disc;
 }
-ol.standard-list {
+ol {
     list-style-type: decimal;
 }
 
