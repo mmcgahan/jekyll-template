@@ -1,0 +1,17 @@
+#content {
+    padding-top: 4em;
+    padding-bottom: 5em;
+    background: $color-bg;
+    border: solid $grey-lighter;
+    border-width: 0 1px;
+}
+.content-sidebar {
+    @extend %type-sans;
+    p {
+        @include type-scale(1);
+    }
+}
+.sidebar-heading {
+    @extend %type-primary;
+    color: $grey;
+}

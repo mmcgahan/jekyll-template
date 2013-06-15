@@ -1,0 +1,26 @@
+#footer {
+    @extend %type-sans;
+    @extend #header;
+    border-top-width: 1px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+.footer-col {
+    @include type-scale(0);
+}
+.footer-navlist {
+    @extend %list-bare;
+}
+.footer-navitem {
+    @include ellipsis();
+}
+.footer-logo-title {
+    @extend %type-light;
+}
+.footer-left {
+    text-align: left;
+}
+.footer-right {
+    text-align: right;
+}

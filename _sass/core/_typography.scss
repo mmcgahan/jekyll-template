@@ -13,41 +13,11 @@ $line_height_lists:             1.2;
 $type-scales: 13 15 16 18 20 25 32 40 48;
 // base             16
 
-%scale-0 {
-    font-size: px-to-em(nth($type-scales, 1));
+@for $i from 1 through length($type-scales) {
+    %scale-#{$i - 1} { font-size: px-to-em(nth($type-scales, $i)); }
 }
 
-%scale-1 {
-    font-size: px-to-em(nth($type-scales, 2));
-}
-
-%scale-2 {
-    font-size: px-to-em(nth($type-scales, 3));
-}
-
-%scale-3 {
-    font-size: px-to-em(nth($type-scales, 4));
-}
-
-%scale-4 {
-    font-size: px-to-em(nth($type-scales, 5));
-}
-
-%scale-5 {
-    font-size: px-to-em(nth($type-scales, 6));
-}
-
-%scale-6 {
-    font-size: px-to-em(nth($type-scales, 7));
-}
-
-%scale-7 {
-    font-size: px-to-em(nth($type-scales, 8));
-}
-
-%scale-serif-0 {
-    font-size: px-to-em(16);
-}
+%scale-serif-0 { font-size: px-to-em(16); }
 
 %scale-secondary-0 {
     font-size: px-to-em(13);
@@ -67,7 +37,7 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
 }
 
 %type-primary {
-    @extend %type-light;
+    @include font($font-family: $base-font-family, $font-weight: $base-font-weight, $font-style: normal);
 }
 
 %type-sans {
@@ -79,12 +49,6 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
     font-family: $base-font-sans-stack;
     word-spacing: 0;
 }
-
-%type-secondary {
-    font-family: $secondary-font-serif-stack;
-    word-spacing: 0;
-}
-
 %type-antialiased {
     -webkit-font-smoothing: antialiased;
 }
@@ -126,9 +90,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5em;
+    p + & {
+        margin-top: 1.5em;
+    }
+}
+h1, h3, h5 {
+    @extend %type-light;
 }
 h2, h4, h6 {
-    @extend %type-bold;
+    @extend %type-regular;
 }
 h1 {
     @include type-scale(7);
@@ -164,20 +134,17 @@ strong {
 
 // -------------------------------------------------------------
 
-p, ul, ol {
+p {
     margin: 0 0 0.5em;
 }
 
-.standard-list {
+ul, ol {
     padding-left: 2em;
-    li {
-        padding: 0.2em 0.5em;
-    }
 }
-ul.standard-list {
+ul {
     list-style-type: disc;
 }
-ol.standard-list {
+ol {
     list-style-type: decimal;
 }
 
@@ -213,7 +180,6 @@ blockquote {
     margin: 0;
 
     &:before, &:after {
-        @extend %type-secondary;
         position: absolute;
         color: $grey-light;
         font-style: normal;

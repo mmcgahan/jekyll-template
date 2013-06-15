@@ -12,12 +12,14 @@ $base-font-size:                16; //px
 $base-font-size-px:             #{$base-font-size}px;
 $em:                            $base-font-size * 1;
 
-$base-font-family:              Garamond; // the single font-family as opposed to the full stack
-$base-font-family-backup:       Georgia, serif;  // the backup to the $base-font-family
+$base-font-serif-family:              Merriweather; // the single font-family as opposed to the full stack
+$base-font-serif-family-backup:       Georgia, serif;  // the backup to the $base-font-family
 
 $base-font-sans-stack:          Helvetica, Arial, sans-serif;
-$secondary-font-serif-stack:    $base-font-family-backup;
 $base-font-monospaced-stack:    'Courier New', Courier, monospace;
+
+$base-font-family: $base-font-serif-family;
+$base-font-family-backup: $base-font-serif-family-backup;
 
 $base-font-weight:              400;
 $word-spacing:                  0;
@@ -71,6 +73,9 @@ $grey-medium:                   #6d6d6d;
 // APPPLIED COLOURS
 //----------------------------------
 
+$color-theme: $very-pale-blue;
+
+$color-body:                    $grey-lightest;
 $color-bg:                      $white;
 $color_border:                  $grey-light;
 $color-text:                    $grey-dark;

@@ -18,29 +18,29 @@
 
 @include define-grid-settings(
     $grid-name: 'full_width',
-    $column-width: 85,
-    $gutter-width: 15,
+    $column-width: 70,
+    $gutter-width: 30,
     $num-columns: 12,
-    $padding-left: 1.5em,
-    $padding-right: 1.5em,
+    $padding-left: 8em,
+    $padding-right: 8em,
     $breakpoints: (
         (
             query return-media-query(wide),
-            padding-left 2.6em,
-            padding-right 2.6em
+            padding-left 8em,
+            padding-right 8em
         ),
         (
             query return-media-query(desktop-up),
             width $grid-full-width-max-width,
-            padding-left 2.6em,
-            padding-right 2.6em,
+            padding-left 8em,
+            padding-right 8em,
             apply-to-browsers-w/o-media-queries true
         ),
         (
             query return-media-query(skinny-only),
             width 100%,
-            padding-left 0.5em,
-            padding-right 0.5em
+            padding-left 5em,
+            padding-right 5em
         ),
         (
             query return-media-query(mobile-only),
