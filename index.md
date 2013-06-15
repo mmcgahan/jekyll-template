@@ -15,7 +15,7 @@ Watch out for manual line breaks, which are the result of two spaces
 at the end of a line.
 All other kinds of line breaks will be ignored.
 
-Want a [link]({{ site.root }})? We've [got]({{ site.root }}) [links]({{ site.root }}).
+Want a [link]({{ site.baseurl }})? We've [got]({{ site.baseurl }}) [links]({{ site.baseurl }}).
 
 ---
 

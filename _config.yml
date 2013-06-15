@@ -1,4 +1,5 @@
 name: Starting point
 permalink: none
-exclude: [config.rb, _sass, Procfile]
-root: "/"
+exclude: [config.rb, _sass, Procfile, 1x, 2x, 1x-*, 2x-*]
+baseurl: "/"
+markdown: rdiscount
