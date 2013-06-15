@@ -1,0 +1,116 @@
+// _grid.scss
+// -------------------------------------------------------------
+
+
+@mixin column-offset(
+    $grid-name,
+    $num-columns,
+    $direction
+    ){
+    $column-width: return-grid-settings( $grid-name, 'column-width' );
+    $gutter-width: return-grid-settings( $grid-name, 'gutter-width' );
+    $row-width: return-grid-settings( $grid-name, 'row-width-inner' );
+    $current-column-width: $num-columns * $column-width + ($gutter-width * $num-columns);
+    $offset: percentage-round( $current-column-width / $row-width );
+
+    margin-#{$direction}: #{$offset};
+}
+
+@include define-grid-settings(
+    $grid-name: 'full_width',
+    $column-width: 85,
+    $gutter-width: 15,
+    $num-columns: 12,
+    $padding-left: 1.5em,
+    $padding-right: 1.5em,
+    $breakpoints: (
+        (
+            query return-media-query(wide),
+            padding-left 2.6em,
+            padding-right 2.6em
+        ),
+        (
+            query return-media-query(desktop-up),
+            width $grid-full-width-max-width,
+            padding-left 2.6em,
+            padding-right 2.6em,
+            apply-to-browsers-w/o-media-queries true
+        ),
+        (
+            query return-media-query(skinny-only),
+            width 100%,
+            padding-left 0.5em,
+            padding-right 0.5em
+        ),
+        (
+            query return-media-query(mobile-only),
+            width 100%,
+            padding-left 0.5em,
+            padding-right 0.5em
+        )
+    )
+);
+
+@include apply-grid(
+    $use-grid: 'full_width',
+    $container-selector: '.grid_container',
+    $row-selector: '%grid_row',
+    $row-extend-selectors: '%grid_row',
+    $column-extend-selectors: '%grid_col' '%mobile_col',
+    $column-selector-prefix: '.grid-col-',
+    $break-columns: (
+        (
+            breakpoint 4,
+            selector '%mobile_col',
+            columns 12
+        )
+    )
+);
+
+%grid_container {
+    @include clearfix;
+    max-width: $grid-full-width-max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid-container {
+    @extend %grid_container;
+}
+
+%grid_row{
+    @include clearfix;
+    .no_haslayout &{ // Fixing clearfix for IE6 and IE7
+        clear: both;
+    }
+}
+.grid-row {
+    @extend %grid_row;
+}
+
+%grid_col {
+    float: left;
+    @if $grid-debug == true {
+        position: relative;
+        min-height: 10px;
+        background-color: #ddf6ff;
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            background-color: darken(#ddf6ff,5%);
+            width: 1px;
+        }
+        &:after{
+            font-size: 11px;
+            line-height: 1em;
+            left: 0;
+            white-space: nowrap;
+        }
+        &:before{
+            right: 0;
+        }
+    }
+}

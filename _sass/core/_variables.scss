@@ -1,0 +1,129 @@
+// _variables.scss
+//
+
+
+// Typography Defaults
+//----------------------------------
+
+// FONTS
+//----------------------------------
+
+$base-font-size:                16; //px
+$base-font-size-px:             #{$base-font-size}px;
+$em:                            $base-font-size * 1;
+
+$base-font-family:              Garamond; // the single font-family as opposed to the full stack
+$base-font-family-backup:       Georgia, serif;  // the backup to the $base-font-family
+
+$base-font-sans-stack:          Helvetica, Arial, sans-serif;
+$secondary-font-serif-stack:    $base-font-family-backup;
+$base-font-monospaced-stack:    'Courier New', Courier, monospace;
+
+$base-font-weight:              400;
+$word-spacing:                  0;
+
+
+// COLOURS - colour swatch mockup http://clients.springload.co.nz/springload/site-redesign-2012/colour.html
+//         - taken from /SL365-website-2011/SL site Eileen/colour-pallette.psd
+//----------------------------------
+
+$SL_green:                      #A6CD86;
+
+
+// Pallette
+$navy:                          #2a4463;
+$fuschia:                       #bd1347;
+$green:                         #809a53;
+$light-green:                   #9abd60;
+
+$purple:                        #7d3779;
+$dark-purple:                   #80447c;
+$aqua:                          #82DBCB;
+$dark-aqua:                     #61d8c2;
+
+$teal:                          #81d2c4;
+$dark-teal:                     #2a7b85;
+$blue:                          #37b2cd;
+$light-teal:                    tint($blue, 80%);
+$pale-blue:                     #bee2ea;
+$very-pale-blue:                #eff9fb;
+$another-blue:                  #1c8aa5;
+$bright-blue:                   #23b6e6;
+$light-blue:                    #90cfec;
+
+$amber:                         #FFA500;
+$red:                           #e0001a;
+
+// Shades
+$white:                         #fff;
+$black:                         #1D2624;
+$charcoal:                      #2c2d2f;
+$charcoal-highlight:            #494b4d;
+
+$grey-dark:                     #3b3a3a;
+$grey:                          #95999a;
+$grey-light:                    #d6d6d6;
+$grey-lighter:                  #e6e6e6;
+$grey-lightest:                 #fafafa;
+$grey-medium:                   #6d6d6d;
+
+
+// APPPLIED COLOURS
+//----------------------------------
+
+$color-bg:                      $white;
+$color_border:                  $grey-light;
+$color-text:                    $grey-dark;
+$color-text_light:              $grey;
+$color-heading:                 darken($grey-dark, 5%);
+
+$color-links:                   $dark-teal;
+$color-links_hover:             darken($color-links, 20%);
+$color-links_visited:           lighten($color-links, 5%);
+
+$color-selection-text:          $black;
+$color-selection-bg:            $grey-light;
+
+
+// BUTTONS
+//----------------------------------
+$button_base_class:             'btn';
+$button-border-radius:          0;
+$button-padding:                10; //px
+$button_line_height:            1; //em
+$button_font_size:              15;
+$button_font_weight:            700;
+
+$button_color:                  $white;
+$button_background:             $teal;
+$button_background_hover:       darken($teal, 5%);
+
+$button_padding:                7; //px
+$button_icon_padding:           12; //px
+$button_padding_large:          20; //px
+$button_font_size:              15; //px
+
+$link_transition_timing:        0.3s;
+
+
+// MESSAGES
+//----------------------------------
+$message_base_class:             '.message';
+
+
+// ERRORS AND WARNINGS
+//----------------------------------
+$color_warning_text:            $amber;
+$color_warning_background:      $amber;
+$color_error_text:              $red;
+$color_error_background:        $red;
+$color_success_text:            $green;
+$color_success_background:      $green;
+
+
+// TRANSITIONS
+//----------------------------------
+
+$transition-duration: 0.3s;
+
+
