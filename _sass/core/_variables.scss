@@ -83,8 +83,12 @@ $color-text_light:              $grey;
 $color-heading:                 darken($grey-dark, 5%);
 
 $color-links:                   $dark-teal;
-$color-links_hover:             darken($color-links, 20%);
+$color-links_hover:             shade($color-links, 20%);
 $color-links_visited:           lighten($color-links, 5%);
+
+$color-links-light:                   lighten($color-links, 20%);
+$color-links-light_hover:             lighten($color-links-light, 20%);
+$color-links-light_visited:           shade($color-links-light, 5%);
 
 $color-selection-text:          $black;
 $color-selection-bg:            $grey-light;
