@@ -1,53 +1,43 @@
 ---
 layout: default
-title: Typography
+title: Home
 ---
 
-# Typography - h1
+### Ph.D. Candidate at the University of Virginia *(expected May 2014)*
 
-Paragraphs. This is a **markdown** *version* of the homepage. Jekyll should be able to deal with it appropriately.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, ex, nihil, pariatur minima ut explicabo libero quisquam aperiam a molestias repellat assumenda labore nobis fuga reprehenderit impedit eligendi sequi doloribus.
 
-- bullet lists
-- are the
-- bestest
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consectetur, aspernatur, natus doloribus expedita consequuntur commodi earum ea eos eaque praesentium non dignissimos? Dolore, quas quis cupiditate non beatae sapiente.
 
-Watch out for manual line breaks, which are the result of two spaces  
-at the end of a line.
-All other kinds of line breaks will be ignored.
+### Research interests
 
-Want a [link]({{ site.baseurl }})? We've [got]({{ site.baseurl }}) [links]({{ site.baseurl }}).
+- **Indigineity**
+- **Identity politics**
+- **Gender politics**
 
----
+I love everything.
 
-Horizontal rules are also possible, but maybe you should just use a new heading?
+### Educational background
 
-## Heading 2 - h2
+#### **MSc Political Theory** - *London School of Economics and Political Science*
 
-Paragraph after an h2. The following text is in a blockquote
-
-> Blockquoting like it's my job. What what. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dicta voluptate accusantium repellendus reiciendis labore maiores. Eius, incidunt porro neque omnis recusandae animi iure esse nostrum inventore asperiores? Optio, aspernatur.
-
-> Don't forget to cite that noise. <cite>[Michael Scott][1]</cite>
-
-Paragraph to explain that quote.
-
-- Bullet list with paragraphs.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, ut, repudiandae harum provident explicabo molestiae rerum itaque libero saepe debitis tempore reprehenderit illum dicta officiis ab veritatis quos nihil quod!
-
-- This will be in a paragraph, but it's only one line
-
-That's the end of the bullet list with paragraphs.
-
-### List of all posts - h3
-{% for post in site.posts %}
-- {{ post.date | date_to_string }} &raquo; [{{ post.title }}]({{ post.url }})
-{% endfor %}
+#### **BA (Hons) Political Theory** - *Victoria University of Wellington*
 
 
 {% sidebar %}
-## Sidebar heading
+## Current work
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quos, fuga eligendi quisquam laudantium ut corporis voluptate unde inventore ex minima modi rerum numquam provident pariatur officia nihil quod asperiores.
+### Dissertation
+
+How do conceptions of indigineity affect and interact with political power?
+
+[read more...]({{ site.baseurl }}research/)
+
+### Syllabus development
+
+Connecting the foundations of political theory with current debates in the field.
+
+[read more...]({{ site.baseurl }}teaching/)
+
 {% endsidebar %}
 [1]:http://www.google.com/ "Michael Scott" 
