@@ -1,11 +1,14 @@
 <div id="header">
     <div class="grid-container">
-        <div class="grid-row">
-            <div class="header-logo grid-col-3">
+        <div class="header-row grid-row">
+            <div class="header-logo">
                 <h1 class="header-logo-title"><a href="{{ site.baseurl }}">{{ site.name }}</a></h1>
             </div>
-            <div class="header-nav grid-col-9">
+            <div class="header-nav">
                 <ul class="header-navlist">
+                    <li class="header-navitem"><a href="{{ site.baseurl }}sample" class="header-navlink">Sample page</a></li>
+                    <li class="header-navitem"><a href="{{ site.baseurl }}sample" class="header-navlink">Sample page</a></li>
+                    <li class="header-navitem"><a href="{{ site.baseurl }}sample" class="header-navlink">Sample page</a></li>
                     {% for post in site.tags.nav %}
                     <li class="header-navitem"><a href="{{ site.baseurl }}{{ post.url }}" class="header-navlink">{{ post.title }}</a></li>
                     {% endfor %}
