@@ -1,24 +1,40 @@
 #header {
     background-color: white;
-    padding: 1em 0;
     border: solid $grey-light;
     border-width: 0 0 1px;
     a {
         color: $color-text;
+        &:hover {
+            color: $color-links_hover;
+        }
+    }
+    .header-row {
+        padding: 0;
     }
 }
 .header-logo {
-
+    float: left;
 }
 .header-logo-title {
-    @include type-scale(3);
+    @include type-scale(4);
     margin: 0;
+    a {
+        display: block;
+        padding: 0.8em 1em 0.5em;
+    }
 }
 .header-nav {
     @extend %type-sans;
     @extend %type-light;
     text-align: right;
+    float: right;
 }
 .header-navlist {
     @extend %list-horiz-block;
+}
+.header-navitem {
+}
+.header-navlink {
+    display: block;
+    padding: 1em 1.5em;
 }

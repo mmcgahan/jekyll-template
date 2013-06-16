@@ -16,11 +16,6 @@
     @include ellipsis();
 }
 .footer-logo-title {
+    @extend %type-primary;
     @extend %type-light;
-}
-.footer-left {
-    text-align: left;
-}
-.footer-right {
-    text-align: right;
 }
