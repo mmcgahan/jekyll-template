@@ -8,6 +8,7 @@ http_path = "/"
 css_dir = "css"
 sass_dir = "_sass"
 images_dir = "images"
+http_images_path = "/~cvt7fx/images"
 javascripts_dir = "includes"
 
 require File.join(dir, sass_dir, 'lib', 'custom-extensions.rb')
