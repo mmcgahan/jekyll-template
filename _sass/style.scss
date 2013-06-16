@@ -1,6 +1,3 @@
-// RED CROSS + lookin' sassy.
-// -------------------------------------------------------------
-
 // Include the Compass framework
 // ==================================
 @import 'compass';
@@ -46,8 +43,9 @@
 // Include UI Global
 // ==================================
 @import 'ui-global/layout';
-@import 'ui-global/content';
 @import 'ui-global/header';
+@import 'ui-global/hero';
+@import 'ui-global/content';
 @import 'ui-global/footer';
 
 

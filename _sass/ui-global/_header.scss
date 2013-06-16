@@ -1,8 +1,11 @@
 #header {
-    background: $color-theme;
-    border: solid shade($color-theme, 10%);
-    border-width: 0 0 1px 0;
+    background-color: white;
     padding: 1em 0;
+    border: solid $grey-light;
+    border-width: 0 0 1px;
+    a {
+        color: $color-text;
+    }
 }
 .header-logo {
 
@@ -13,6 +16,8 @@
 }
 .header-nav {
     @extend %type-sans;
+    @extend %type-light;
+    text-align: right;
 }
 .header-navlist {
     @extend %list-horiz-block;

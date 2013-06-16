@@ -1,0 +1,15 @@
+#hero {
+    background-size: cover;
+    color: white;
+}
+.hero-content {
+    @extend %background-noise;
+    background-color: transparentize($black, 0.1);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    p {
+        @include type-scale(2);
+        @extend %type-sans;
+        @extend %type-light;
+    }
+}
