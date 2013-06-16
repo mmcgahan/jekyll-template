@@ -3,9 +3,10 @@
         <div class="grid-col-9 content-body">
             {{ content }}
         </div>
+        {% if page.sidebar %}
         <div class="grid-col-3 content-sidebar">
-            <h2 class="sidebar-heading">Sidebar heading</h2>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quos, fuga eligendi quisquam laudantium ut corporis voluptate unde inventore ex minima modi rerum numquam provident pariatur officia nihil quod asperiores.</p>
+            {{ page.sidebar | markdownify }}
         </div>
+        {% endif %}
     </div>
 </div>

@@ -44,4 +44,10 @@ That's the end of the bullet list with paragraphs.
 - {{ post.date | date_to_string }} &raquo; [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
+
+{% sidebar %}
+## Sidebar heading
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quos, fuga eligendi quisquam laudantium ut corporis voluptate unde inventore ex minima modi rerum numquam provident pariatur officia nihil quod asperiores.
+{% endsidebar %}
 [1]:http://www.google.com/ "Michael Scott" 
