@@ -6,12 +6,14 @@
     border-width: 0 1px;
 }
 .content-sidebar {
+    // this might be simple markdown-converted content,
+    // therefore can't rely on particular classes being applied
     @extend %type-sans;
+    h2, h3 {
+        @extend %type-primary;
+        color: $grey;
+    }
     p {
         @include type-scale(1);
     }
-}
-.sidebar-heading {
-    @extend %type-primary;
-    color: $grey;
 }
