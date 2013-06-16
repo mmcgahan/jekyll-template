@@ -7,6 +7,12 @@
     background-color: transparentize($black, 0.1);
     padding-top: 4em;
     padding-bottom: 4em;
+    a {
+        color: $color-links-light;
+        &:hover {
+            color: $color-links-light_hover;
+        }
+    }
     p {
         @include type-scale(2);
         @extend %type-sans;
