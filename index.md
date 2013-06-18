@@ -11,7 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consectet
 
 ### Research interests
 
-- **Indigineity**
+- **Indigeneity**
 - **Identity politics**
 - **Gender politics**
 
