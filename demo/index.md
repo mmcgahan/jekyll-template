@@ -15,7 +15,7 @@ Watch out for manual line breaks, which are the result of two spaces
 at the end of a line.
 All other kinds of line breaks will be ignored.
 
-Want a [link]({{ site.baseurl }})? We've [got]({{ site.baseurl }}) [links]({{ site.baseurl }}).
+Want a [link](http://google.com)? We've [got]({{ site.baseurl }}) [links]({{ site.baseurl }}).
 
 ---
 
@@ -50,4 +50,6 @@ That's the end of the bullet list with paragraphs.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quos, fuga eligendi quisquam laudantium ut corporis voluptate unde inventore ex minima modi rerum numquam provident pariatur officia nihil quod asperiores.
 {% endsidebar %}
+
+
 [1]:http://www.google.com/ "Michael Scott" 

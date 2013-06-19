@@ -1,12 +1,7 @@
 <div id="content" class="grid-container">
     <div class="grid-row">
-        <div class="grid-col-9 content-body">
+        <div class="grid-col-11 content-body">
             {{ content }}
         </div>
-        {% if page.sidebar %}
-        <div class="grid-col-3 content-sidebar">
-            {{ page.sidebar | markdownify }}
-        </div>
-        {% endif %}
     </div>
 </div>

@@ -39,7 +39,10 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
 %type-primary {
     @include font($font-family: $base-font-family, $font-weight: $base-font-weight, $font-style: normal);
 }
-
+%type-serif {
+    font-family: $base-font-serif-stack;
+    word-spacing: 0;
+}
 %type-sans {
     font-family: $base-font-sans-stack;
     word-spacing: 0;
@@ -86,19 +89,32 @@ body {
     @include type-scale(2);
     line-height: $line_height_standard;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
+	& + ul {
+		margin-top: 0;
+	}
+}
+h1, h2 {
+	@extend %type-sans;
     margin-top: 0;
     margin-bottom: 0.5em;
-    p + & {
+    p + &, ul + & {
         margin-top: 1.5em;
     }
+}
+h3,h4,h5 {
+	@extend %type-sans;
+	margin-top: 0;
+    margin-bottom: 0em;
+    p + & {
+        margin-top: 1.5em;
+	}
 }
 h1, h3, h5 {
     @extend %type-light;
 }
 h2, h4, h6 {
-    @extend %type-regular;
+    @extend %type-light;
 }
 h1 {
     @include type-scale(7);
@@ -110,7 +126,7 @@ h2 {
 h3 {
     @include type-scale(4);
     p + & {
-        margin-top: 2em;
+        margin-top: 0em;
     }
 }
 h4 {

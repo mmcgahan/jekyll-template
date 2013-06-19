@@ -5,6 +5,10 @@
     padding-top: 2em;
     padding-bottom: 2em;
     text-align: center;
+    .grid-row{
+    	padding-left: 0;
+    	padding-right: 0;
+	}
 }
 .footer-col {
     @include type-scale(0);

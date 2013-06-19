@@ -8,30 +8,45 @@ tags:
 
 # Teaching
 
-## Syllabi
+## Awards
+- All University TA Award for the Graduate School of Arts and Sciences (2012-2013)
+- Allison J. Meloy Outstanding TA Award for the Politics Department (2012-2013)
+- UVa Teaching Resource Center Course Design Institute Best Syllabus Award (2013)  
 
-### After Modernity: Criticial Theorists and Emancipatory Politics
+## Lecturer
 
-**Political Science and International Relations Department**  
-**Victoria University of Wellington** *[victoria.ac.nz](http://www.victoria.ac.nz/)*  
-*Lecturer*
+### After Modernity: Criticial Theorists and Emancipatory Politics [link to syllabus]  
+*[Political Science and International Relations Department](http://www.victoria.ac.nz/hppi/about/overview-of-the-school/psir-overview), Victoria University of Wellington*  
+Trimester Two 2012  
 
-While I was conducting research in New Zealand, I worked as a Lecturer for an International Relations/Political Theory course at Victoria University of Wellington. This class consisted of approximately 60 upper-level undergraduate students. As lecturer, I designed the course, planned and delivered lectures, devised and graded student assignments, mentored students.
+## Teaching Assistant
+
+### PLPT 3020: Modern Political Thought  
+*[Woodrow Wilson Department of Politics](http://politics.virginia.edu/), University of Virginia*  
+Professor Stephen White, Spring 2011 and 2012
+
+### PLPT 1010: Contemporary Political Thought  
+*[Woodrow Wilson Department of Politics](http://politics.virginia.edu/), University of Virginia*  
+Associate Professor Colin Bird, Fall 2010 and 2011  
+
+Teaching evaluations for all my courses are available upon request.
+
+## Future Courses
+I participated in a week-long workshop run by the [UVa Teaching Resource Center](http://trc.virginia.edu/home.htm), designing an upper-level undergraduate syllabus on theories of equality based on learner-centered principles. I am now applying such teaching and learning principles to other courses I design. Below I have listed a sample of courses that I could teach, including some draft syllabi.
+
+#### Undergraduate
+- Introduction to Political Theory [link to syllabus]
+- Modern Political Theory
+- Desperate Times, Equal Measures? Equality and Difference in Politics [link to syllabus]
+- After Modernity: Critical Theorists and Emancipatory Politics [link to syllabus]
+
+#### Graduate
+- Methods in Political Theory [link to syllabus]
+- Indigenous Politics/Politics of Resistance/Identity Politics
+- Feminist Political Theory
+
+
 
 {% sidebar %}
-## In development
-
-- **The most interesting course in the world**
-
-    This course covers the relatively unknown and mostly unexplored *interesting* side of politics.
-
-- **Politics: What is it?**
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, voluptatem ipsam aliquam quidem doloribus praesentium hic asperiores quasi quia aliquid? Nobis dolore velit aut placeat sed hic eaque similique ad?
-
-- **Indigenous or just Indignant? The crisis of our time**
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
 
 {% endsidebar %}

@@ -14,12 +14,15 @@ $em:                            $base-font-size * 1;
 
 $base-font-serif-family:              Georgia; // the single font-family as opposed to the full stack
 $base-font-serif-family-backup:       Georgia, serif;  // the backup to the $base-font-family
+$base-font-serif-stack: unquote($base-font-serif-family + "," + $base-font-serif-family-backup);
 
-$base-font-sans-stack:          Helvetica, Arial, sans-serif;
+$base-font-sans-family:              Helvetica Neue; // the single font-family as opposed to the full stack
+$base-font-sans-family-backup:       Helvetica, sans-serif;  // the backup to the $base-font-family
+$base-font-sans-stack:          unquote($base-font-sans-family + "," + $base-font-sans-family-backup);
 $base-font-monospaced-stack:    'Courier New', Courier, monospace;
 
-$base-font-family: $base-font-serif-family;
-$base-font-family-backup: $base-font-serif-family-backup;
+$base-font-family: $base-font-sans-family;
+$base-font-family-backup: $base-font-sans-family-backup;
 
 $base-font-weight:              400;
 $word-spacing:                  0;
