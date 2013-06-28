@@ -124,7 +124,9 @@ h2 {
     margin-bottom: 0.3em;
 }
 h3 {
-    @include type-scale(3);
+    @extend %type-bold;
+    font-size: 1em;
+    margin-bottom: 0;
     p + & {
         margin-top: 1em;
     }
