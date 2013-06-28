@@ -10,7 +10,7 @@ $line_height_lists:             1.2;
 // Default typographic scales......
 // zero-based when calling type-scale
 //             0  1  2  3  4  5  6  7  8
-$type-scales: 12 14 16 18 20 25 32 40 48;
+$type-scales: 12 14 15 18 20 25 32 36 48;
 // base             16
 
 @for $i from 1 through length($type-scales) {
