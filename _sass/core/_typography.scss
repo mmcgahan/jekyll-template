@@ -10,7 +10,7 @@ $line_height_lists:             1.2;
 // Default typographic scales......
 // zero-based when calling type-scale
 //             0  1  2  3  4  5  6  7  8
-$type-scales: 13 15 16 18 20 25 32 40 48;
+$type-scales: 12 14 16 18 20 25 32 40 48;
 // base             16
 
 @for $i from 1 through length($type-scales) {
@@ -38,6 +38,7 @@ $type-scales: 13 15 16 18 20 25 32 40 48;
 
 %type-primary {
     @include font($font-family: $base-font-family, $font-weight: $base-font-weight, $font-style: normal);
+    -webkit-font-smoothing: antialiased;
 }
 %type-serif {
     font-family: $base-font-serif-stack;
@@ -105,7 +106,7 @@ h1, h2 {
 h3,h4,h5 {
 	@extend %type-sans;
 	margin-top: 0;
-    margin-bottom: 0em;
+    margin-bottom: 0.2em;
     p + & {
         margin-top: 1.5em;
 	}

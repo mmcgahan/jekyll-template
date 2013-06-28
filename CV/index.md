@@ -20,18 +20,19 @@ BA Political Science and History (2003-2005)
 *[Victoria University of Wellington](http://www.victoria.ac.nz/home)*
 
 ## Awards
+American Political Science Association Travel Grant (August 2013)  
 University of Virginia Course Design Institute Best Syllabus Award (May 2013)  
-[All University Graduate Teaching Assistant Award](http://trc.virginia.edu/Awards/GTA/OGTA.htm) (2012-2013)  
+[All University Graduate Teaching Assistant Award, Social Sciences](http://trc.virginia.edu/Awards/GTA/OGTA.htm) (2012-2013)  
 Allison J. Meloy Outstanding Graduate Teaching Award (2012-2013)  
-Robert J. Huskey Travel Fellowship (March 2013, August 2013)  
-Dumas Malone Graduate Research Fellowship (2012 – 2013)  
-Raven Society Fellowship (2012 – 2013)  
-University of Virginia President’s Fellowship (2009 – 2014)  
-[New Zealand Fulbright Scholar](http://www.fulbright.org.nz/) (2009 – 2010)  
-LSE merit-based funding (2008 – 2009)  
-Member of [Goodenough College](http://www.goodenough.ac.uk/), London (2008 – 2009)  
-[New Zealand United World Colleges Scholarship](http://www.lpcuwc.edu.hk/) (2000 – 2002)
+Robert J. Huskey Travel Fellowships (March 2013, June 2013)  
+Dumas Malone Graduate Research Fellowship (2012-2013)  
+Raven Society Fellowship (2012-2013)  
+University of Virginia President’s Fellowship (2009-2014)  
+[New Zealand Fulbright Scholar](http://www.fulbright.org.nz/) (2009-2010)  
+LSE merit-based funding (2008-2009)  
+Member of [Goodenough College](http://www.goodenough.ac.uk/), London (2008-2009)  
+[New Zealand United World Colleges Scholarship](http://www.lpcuwc.edu.hk/) (2000-2002)
 <br>
 <br>
 
-My complete CV is here. [link to CV]
+My complete CV is [here]({{site.baseurl}}docs/CV_June2013.pdf).

@@ -15,7 +15,7 @@ tags:
 
 ## Lecturer
 
-### After Modernity: Criticial Theorists and Emancipatory Politics [link to syllabus]  
+### [After Modernity: Criticial Theorists and Emancipatory Politics]({{site.baseurl}}docs/INTP370_2012.pdf)  
 *[Political Science and International Relations Department](http://www.victoria.ac.nz/hppi/about/overview-of-the-school/psir-overview), Victoria University of Wellington*  
 Trimester Two 2012  
 
@@ -27,21 +27,23 @@ Professor Stephen White, Spring 2011 and 2012
 
 ### PLPT 1010: Contemporary Political Thought  
 *[Woodrow Wilson Department of Politics](http://politics.virginia.edu/), University of Virginia*  
-Associate Professor Colin Bird, Fall 2010 and 2011  
+Associate Professor Colin Bird, Fall 2010 and 2011
+<br>
+<br>
 
 Teaching evaluations for all my courses are available upon request.
 
 ## Future Courses
-I participated in a week-long workshop run by the [UVa Teaching Resource Center](http://trc.virginia.edu/home.htm), designing an upper-level undergraduate syllabus on theories of equality based on learner-centered principles. I am now applying such teaching and learning principles to other courses I design. Below I have listed a sample of courses that I could teach, including some draft syllabi.
+I participated in a week-long workshop run by the [UVa Teaching Resource Center](http://trc.virginia.edu/home.htm), designing an upper-level undergraduate course on theories of equality based on learner-centered principles. I am now applying such teaching and learning principles to other courses I design. Below is a sample of courses that I could teach, including some draft syllabi.
 
 #### Undergraduate
-- Introduction to Political Theory [link to syllabus]
+- [Introduction to Political Theory]({{site.baseurl}}docs/Intro_June2013.pdf)
 - Modern Political Theory
-- Desperate Times, Equal Measures? Equality and Difference in Politics [link to syllabus]
-- After Modernity: Critical Theorists and Emancipatory Politics [link to syllabus]
+- [Desperate Times, Equal Measures? Equality and Difference in Politics]({{site.baseurl}}docs/Equalities_May2013.pdf)
+- [After Modernity: Critical Theorists and Emancipatory Politics]({{site.baseurl}}docs/CriticalTheory_June2013.pdf)
 
 #### Graduate
-- Methods in Political Theory [link to syllabus]
+- [Methods in Political Theory]({{site.baseurl}}docs/Methods_June2013.pdf)
 - Indigenous Politics/Politics of Resistance/Identity Politics
 - Feminist Political Theory
 
