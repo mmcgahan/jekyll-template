@@ -111,10 +111,7 @@ h3,h4,h5 {
         margin-top: 1.5em;
 	}
 }
-h1, h5 {
-    @extend %type-light;
-}
-h2, h4, h6 {
+h1, h2, h3, h4, h5, h6 {
     @extend %type-light;
 }
 h1 {
@@ -123,14 +120,13 @@ h1 {
 }
 h2 {
     @include type-scale(5);
-    @extend %type-regular;
+    border-bottom: 1px solid silver;
     margin-bottom: 0.3em;
 }
 h3 {
-    @extend %type-regular;
     @include type-scale(3);
     p + & {
-        margin-top: 0.7em;
+        margin-top: 1em;
     }
 }
 h4 {
