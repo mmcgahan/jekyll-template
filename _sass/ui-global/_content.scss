@@ -17,3 +17,12 @@
         @include type-scale(1);
     }
 }
+.title-link {
+    font-size: 0.5em;
+    color: $grey;
+    display: inline-block;
+    margin-left: 0.5em;
+    &:hover {
+        color: $color-links_hover;
+    }
+}

@@ -3,7 +3,7 @@ layout: inner
 title:  "CV"
 ---
 
-# Claire Timperley
+# Claire Timperley <a class="title-link" href="{{site.baseurl}}docs/CV_June2013.pdf">&raquo; download CV</a>
 
 ## Education
 
