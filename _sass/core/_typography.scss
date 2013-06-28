@@ -2,7 +2,7 @@
 // -------------------------------------------------------------
 
 $base_line_height:              28; //px
-$line_height_standard:          1.5;
+$line_height_standard:          1.4;
 $line_height_heading:           1;
 $line_height_lists:             1.2;
 
@@ -111,7 +111,7 @@ h3,h4,h5 {
         margin-top: 1.5em;
 	}
 }
-h1, h3, h5 {
+h1, h5 {
     @extend %type-light;
 }
 h2, h4, h6 {
@@ -126,9 +126,10 @@ h2 {
     margin-bottom: 0.3em;
 }
 h3 {
+    @extend %type-regular;
     @include type-scale(3);
     p + & {
-        margin-top: 0em;
+        margin-top: 0.7em;
     }
 }
 h4 {
