@@ -40,11 +40,11 @@ These papers are available upon request.
 
 
 ## Discussant
-"Waging Defensive War: The Cuban Missile Crisis and Cambodian Incursion"  
+### Waging Defensive War: The Cuban Missile Crisis and Cambodian Incursion
 Mariah Zeisberg, *Political Theory Colloquium, University of Virginia*  
 Charlottesville, February 2012
 
-"Invisible Disability: Seeing, Being, Power"  
+### Invisible Disability: Seeing, Being, Power
 Nancy Hirschmann, *Political Theory Colloquium, University of Virginia*  
 Charlottesville, April 2011
 

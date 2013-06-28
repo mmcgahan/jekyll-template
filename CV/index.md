@@ -32,7 +32,3 @@ University of Virginia President’s Fellowship (2009-2014)
 LSE merit-based funding (2008-2009)  
 Member of [Goodenough College](http://www.goodenough.ac.uk/), London (2008-2009)  
 [New Zealand United World Colleges Scholarship](http://www.lpcuwc.edu.hk/) (2000-2002)
-<br>
-<br>
-
-My complete CV is [here]({{site.baseurl}}docs/CV_June2013.pdf).
