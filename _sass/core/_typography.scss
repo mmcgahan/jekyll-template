@@ -123,6 +123,7 @@ h1 {
 }
 h2 {
     @include type-scale(5);
+    @extend %type-regular;
     margin-bottom: 0.3em;
 }
 h3 {
