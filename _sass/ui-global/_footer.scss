@@ -11,7 +11,7 @@
 	}
 }
 .footer-col {
-    @include type-scale(0);
+    @include type-scale(1);
 }
 .footer-navlist {
     @extend %list-bare;
